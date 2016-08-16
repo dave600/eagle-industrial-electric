@@ -1,9 +1,18 @@
 .header-nav {
   border-top:5px solid $red;
-  background:#ccc;
+  background:#455064;
 
   .nav {
     padding-top: 3px;
+
+    a {
+      color:#ffffff;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .logo {
