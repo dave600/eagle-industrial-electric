@@ -1,17 +1,13 @@
 .header-nav {
-  border-top:7px solid $red;
+  border-top:5px solid $red;
   background:#ccc;
 
-  .logo {
-    padding: 15px 15px 15px 0;
+  .nav {
+    padding-top: 3px;
   }
 
-  @media screen and (max-width: 768px) {
-
-    .logo {
-        padding:15px;
-    }
-    
+  .logo {
+    padding: 10px 0;
   }
 
 }
