@@ -1,3 +1,30 @@
 .about {
   background:#ffffff;
+  padding-top: 20px;
+
+  .leadership__position {
+    text-align: center;
+
+    h4 {
+      color: $red;
+    }
+
+  }
+
+  .clients, .leadership__position {
+    padding-bottom: 20px;
+  }
+
+  @media only screen and (max-width : 990px) {
+    .clients {
+      text-align: center;
+      padding-bottom: 0;
+
+      img {
+        padding-bottom: 20px;
+      }
+    }
+
+  }
+
 }
