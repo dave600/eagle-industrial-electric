@@ -1,6 +1,6 @@
 .header-nav {
   border-top:5px solid $red;
-  background:#455064;
+  background: #4A5464;
 
   .nav {
     padding-top: 3px;
@@ -17,6 +17,16 @@
 
   .logo {
     padding: 10px 0;
+  }
+
+}
+
+@media only screen and (min-width : 900px) {
+
+  .header-nav {
+    background: url('../img/trans05.png') repeat;
+    position: absolute;
+    width: 100%;
   }
 
 }
