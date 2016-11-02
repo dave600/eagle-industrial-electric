@@ -16,7 +16,7 @@
 title: Eagle Industrial Electric
 email: info@eagleielectric.com
 description: Eagle Industrial Electric, Inc. is an electrical contractor serving the City of Philadelphia and surrounding areas. Specializing in commercial building installations, high voltage cabling and substation construction, emergency generation installations, aviation projects, antenna & wireless systems installation, building systems installation, lighting retrofits, restaurant/retail fit outs, and complete electrical systems maintenance.  We offer 24-hour emergency service for any/all electrical situations that may arise.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "file:///Users/droy/Documents/projects/eagle-industrial-electric/_site/" # the subpath of your site, e.g. /blog
 url: "http://eagleielectric.com" # the base hostname & protocol for your site
 github_username:  dave600
 
