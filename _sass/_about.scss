@@ -1,6 +1,8 @@
 .about, .services, .projects, .contact {
   background:#ffffff;
+}
 
+.about {
   .leadership__position {
     text-align: center;
 
@@ -28,8 +30,11 @@
 
 }
 
-.secondary__billboard {
+.about .secondary__billboard {
   background: url("../img/about-billboard.jpg") repeat center;
+}
+
+.secondary__billboard {
   padding: 10px 30px;
   margin-bottom: 10px;
 

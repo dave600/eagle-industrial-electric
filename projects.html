@@ -13,157 +13,95 @@ root: ../
   <div class="container">
     <h4>Projects Bidding</h4>
     <div class="divider"></div>
-    <div class="project-details">
-      <h5>Project Name Here - 11/6/2016</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-      <div class="row">
-        <div class="col-md-4">
-          <p><b>Plans</b></p>
-            <ul>
-              <li><a href="">plans</a></li>
-              <hr>
-              <li><a href="">plans</a></li>
-              <hr>
-            </ul>
-        </div>
-        <div class="col-md-4">
-          <p><b>Specs</b></p>
-          <ul>
-            <li><a href="">specs</a></li>
-            <hr>
-            <li><a href="">specs</a></li>
-            <hr>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <p><b>Addenda</b></p>
-          <ul>
-            <li><a href="">addenda</a></li>
-            <hr>
-            <li><a href="">addenda</a></li>
-            <hr>
-            <li><a href="">addenda</a></li>
-            <hr>
-            <li><a href="">addenda</a></li>
-            <hr>
-          </ul>
-        </div>
-      </div>
-      <hr>
-    </div>
-    <div class="project-details">
-      <h5>Project Name Here - 11/6/2016</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-      <div class="row">
-        <div class="col-md-4">
-          <p><b>Plans</b></p>
-            <ul>
-              <li><a href="">plans</a></li>
-              <hr>
-              <li><a href="">plans</a></li>
-              <hr>
-            </ul>
-        </div>
-        <div class="col-md-4">
-          <p><b>Specs</b></p>
-          <ul>
-            <li><a href="">specs</a></li>
-            <hr>
-            <li><a href="">specs</a></li>
-            <hr>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <p><b>Addenda</b></p>
-          <ul>
-            <li><a href="">addenda</a></li>
-            <hr>
-            <li><a href="">addenda</a></li>
-            <hr>
-            <li><a href="">addenda</a></li>
-            <hr>
-            <li><a href="">addenda</a></li>
-            <hr>
-          </ul>
-        </div>
-      </div>
-      <hr>
-    </div>
-    <div class="project-details">
-      <h5>Project Name Here - 11/6/2016</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-      <div class="row">
-        <div class="col-md-4">
-          <p><b>Plans</b></p>
-            <ul>
-              <li><a href="">plans</a></li>
-              <hr>
-              <li><a href="">plans</a></li>
-              <hr>
-            </ul>
-        </div>
-        <div class="col-md-4">
-          <p><b>Specs</b></p>
-          <ul>
-            <li><a href="">specs</a></li>
-            <hr>
-            <li><a href="">specs</a></li>
-            <hr>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <p><b>Addenda</b></p>
-          <ul>
-            <li><a href="">addenda</a></li>
-            <hr>
-            <li><a href="">addenda</a></li>
-            <hr>
-            <li><a href="">addenda</a></li>
-            <hr>
-            <li><a href="">addenda</a></li>
-            <hr>
-          </ul>
-        </div>
-      </div>
-      <hr>
-    </div>
-    <div class="project-details">
-      <h5>Project Name Here - 11/6/2016</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-      <div class="row">
-        <div class="col-md-4">
-          <p><b>Plans</b></p>
-            <ul>
-              <li><a href="">plans</a></li>
-              <hr>
-              <li><a href="">plans</a></li>
-              <hr>
-            </ul>
-        </div>
-        <div class="col-md-4">
-          <p><b>Specs</b></p>
-          <ul>
-            <li><a href="">specs</a></li>
-            <hr>
-            <li><a href="">specs</a></li>
-            <hr>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <p><b>Addenda</b></p>
-          <ul>
-            <li><a href="">addenda</a></li>
-            <hr>
-            <li><a href="">addenda</a></li>
-            <hr>
-            <li><a href="">addenda</a></li>
-            <hr>
-            <li><a href="">addenda</a></li>
-            <hr>
-          </ul>
-        </div>
-      </div>
-      <hr>
+
+    <div id="projects-content">
+      <div id="loading-icon"><img src="{{page.root}}img/spin.gif"</div>
     </div>
   </div>
 </section>
+<script id="projects-template" type="text/x-handlebars-template">
+  {% raw %}
+  <div class="project-details">
+    <h5>{{ProjectName}} - {{BidsDue}}</h5>
+    <p>{{Note}}</p>
+    <div class="row">
+      <div class="col-md-4">
+        <p><b>Plans</b></p>
+          <ul>
+            {{#if PlansPDF.length}}
+              <li><a href="http://www.google.com/{{PlansPDF}}">Plan 1</a></li>
+            {{/if}}
+            {{#if PlansPDF2.length}}
+              <hr>
+              <li><a href="{{PlansPDF2}}">Plan 2</a></li>
+            {{/if}}
+            {{#if PlansPDF3.length}}
+              <hr>
+              <li><a href="{{PlansPDF3}}">Plan3</a></li>
+            {{/if}}
+            {{#if PlansPDF4.length}}
+              <hr>
+              <li><a href="{{PlansPDF4}}">Plan 4</a></li>
+            {{/if}}
+            {{#if PlansPDF5.length}}
+              <hr>
+              <li><a href="{{PlansPDF5}}">Plan 5</a></li>
+            {{/if}}
+            <hr>
+          </ul>
+      </div>
+      <div class="col-md-4">
+        <p><b>Specs</b></p>
+        <ul>
+          {{#if SpecsPDF.length}}
+            <li><a href="{{SpecsPDF}}">Specs 1</a></li>
+          {{/if}}
+          {{#if SpecsPDF2.length}}
+            <hr>
+            <li><a href="{{SpecsPDF2}}">Specs 2</a></li>
+          {{/if}}
+          {{#if SpecsPDF3.length}}
+            <hr>
+            <li><a href="{{SpecsPDF3}}">Specs 3</a></li>
+          {{/if}}
+          {{#if SpecsPDF4.length}}
+            <hr>
+            <li><a href="{{SpecsPDF4}}">Specs 4</a></li>
+          {{/if}}
+          {{#if SpecsPDF5.length}}
+            <hr>
+            <li><a href="{{SpecsPDF5}}">Specs 5</a></li>
+          {{/if}}
+          <hr>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <p><b>Addenda</b></p>
+        <ul>
+          {{#if AddendaPDF.length}}
+            <li><a href="{{AddendaPDF}}">Addenda</a></li>
+          {{/if}}
+          {{#if AddendaPDF2.length}}
+            <hr>
+            <li><a href="{{AddendaPDF2}}">Addenda 2</a></li>
+          {{/if}}
+          {{#if AddendaPDF3.length}}
+            <hr>
+            <li><a href="{{AddendaPDF3}}">Addenda 3</a></li>
+          {{/if}}
+          {{#if AddendaPDF4.length}}
+            <hr>
+            <li><a href="{{AddendaPDF4}}">Addenda 4</a></li>
+          {{/if}}
+          {{#if AddendaPDF5.length}}
+            <hr>
+            <li><a href="{{AddendaPDF5}}">Addenda 5</a></li>
+          {{/if}}
+          <hr>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  {% endraw %}
+</script>
