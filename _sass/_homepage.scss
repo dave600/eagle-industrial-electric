@@ -49,6 +49,13 @@
       .homepage__billboard {
         padding: 10px 5px;
       }
+
   }
 
+}
+
+@media only screen and (max-width : 400px) {
+    .homepage {
+        height:1150px;
+    }
 }

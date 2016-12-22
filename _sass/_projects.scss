@@ -1,6 +1,8 @@
 
 .secondary__billboard {
-  background: url("../img/projects-billboard.jpg") repeat center;
+  background: url("../img/projects-billboard.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .project-details {

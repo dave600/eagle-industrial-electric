@@ -25,11 +25,11 @@
         <h4>Site Map</h4>
         <div class="site-map footer-links__divider"></div>
         <ul>
-          <li><a class="home-nav" href="{{ site.baseurl }}index.html">Home</a></li>
-          <li><a class="about-nav" class="" href="{{ site.baseurl }}about/index.html">About Us</a></li>
-          <li><a class="services-nav" href="{{ site.baseurl }}services/index.html">Services</a></li>
-          <li><a class="projects-nav" href="{{ site.baseurl }}projects/index.html">Projects</a></li>
-          <li><a class="contact-nav" href="{{ site.baseurl }}contact/index.html">Contact Us</a></li>
+          <li><a class="home-nav" href="{{ site.baseurl }}/index.html">Home</a></li>
+          <li><a class="about-nav" class="" href="{{ site.baseurl }}/about/index.html">About Us</a></li>
+          <li><a class="services-nav" href="{{ site.baseurl }}/services/index.html">Services</a></li>
+          <li><a class="projects-nav" href="{{ site.baseurl }}/projects/index.html">Projects</a></li>
+          <li><a class="contact-nav" href="{{ site.baseurl }}/contact/index.html">Contact Us</a></li>
         </ul>
       </div>
       <div class="col-md-12">
@@ -38,3 +38,10 @@
     </div>
   <div>
 </footer>
+<script>
+$(document).ready(function() {
+    $('.main-nav-hamburger').click(function() {
+            $('.main-nav').slideToggle("fast");
+    });
+});
+</script>

@@ -37,3 +37,70 @@ ul {
   margin: 0 0 15px 0;
   background: $grey;
 }
+
+.logo-text {
+  color: #ffffff;
+  font-size: 21px;
+  letter-spacing: 1.5px;
+  position: relative;
+  top: 4px;
+  left: 13px;
+  font-weight: 400;
+}
+
+.contact .secondary__billboard {
+    background: url(../img/contact-billboard.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.btn-primary {
+    background-color: #C41520;
+    border-color: #C41520;
+}
+
+.main-nav-hamburger {
+  display:none;
+}
+
+@media only screen and (max-width : 768px) {
+
+  .main-nav-hamburger {
+    display:block;
+  }
+
+  #nav-toggle {
+    float: right;
+    width: 50px;
+    position: relative;
+    top: -43px;
+  }
+
+  .main-nav {
+    display:none;
+  }
+
+}
+
+@media only screen and (max-width : 400px) {
+
+  .logo-text {
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    position: relative;
+    top: 4px;
+    left: 9px;
+    font-weight: 400;
+  }
+
+  .logo img {
+    width: 45px;
+  }
+
+  #nav-toggle {
+    top:-42px;
+  }
+
+
+}

@@ -4,7 +4,11 @@
 
 .about {
   .leadership__position {
+    border: 1px solid #EBEBEB;
     text-align: center;
+    margin: 20px 14px 0 14px;
+    padding-top: 35px;
+    height: 250px;
 
     h4 {
       color: $red;
@@ -14,6 +18,10 @@
 
   .clients, .leadership__position {
     padding-bottom: 20px;
+  }
+
+  .clients img {
+    padding: 20px 0;
   }
 
   @media only screen and (max-width : 990px) {
@@ -31,24 +39,26 @@
 }
 
 .about .secondary__billboard {
-  background: url("../img/about-billboard.jpg") repeat center;
+  background: url("../img/about-billboard.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .secondary__billboard {
   padding: 10px 30px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 
   @media only screen and (min-width : 900px) {
       height:270px;
 
       &--headline {
-        margin-top:105px;
+        margin-top:135px;
       }
   }
 
   h1 {
     text-align: center;
-    padding: 0 35px;
+    padding: 0;
     font-size: 24px;
   }
 
@@ -60,6 +70,11 @@
 
   &--headline {
     background: url("../img/trans05.png") repeat center;
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 
 }

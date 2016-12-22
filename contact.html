@@ -6,7 +6,7 @@ root: ../
 ---
 <section class="contact">
   <div class="secondary__billboard">
-    <div class="secondary__billboard--headline">
+    <div class="container secondary__billboard--headline">
       <h1>Providing electrical construction and maintenance services in Philadelphia since 1988.</h1>
     </div>
   </div>
@@ -14,7 +14,7 @@ root: ../
     <h4>Contact Us</h4>
     <div class="divider"></div>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <p><strong>Contact:</strong></p>
         <p>Phone: (610) 521-7445</p>
         <p>Fax: (610) 521-7466</p>
@@ -23,12 +23,109 @@ root: ../
         <p><strong>Headquarters:</strong></p>
         <p>310 Powhattan Ave</p>
         <p>Essington, PA 19029</p>
-        <a href="">Get Directions</a>
+        <a href="https://www.google.com/maps/place/310+Powhattan+Ave,+Essington,+PA+19029/@39.869585,-75.2857581,17z/data=!3m1!4b1!4m5!3m4!1s0x89c6c3235102796b:0xec786f829d56ae18!8m2!3d39.869585!4d-75.2835694">Get Directions</a>
       </div>
-      <div class="col-md-8">
-        <p>Please call or email us at any time.  You can email us directly at {{ site.email }}</p>
+      <div class="col-md-9">
+<form name="contact" method="post" action="http://eagleielectric.com/_site/php/send_form_email.php">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" name="name" aria-describedby="name" placeholder="Enter name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" name="email"aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Phone Number</label>
+    <input type="tel" placeholder="1-(555)-555-5555" class="form-control" name="phone" aria-describedby="emailHelp">
+    <br><small id="emailHelp" class="form-text text-muted">We'll never share your name, phone, or email with anyone else.</small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleTextarea">Message</label>
+    <textarea class="form-control" name="message" rows="5" placeholder="Enter message"></textarea>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
       </div>
     </div>
     <br><br>
   </div>
 </section>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+<script>
+/**
+ * Matches US phone number format
+ *
+ * where the area code may not start with 1 and the prefix may not start with 1
+ * allows '-' or ' ' as a separator and allows parens around area code
+ * some people may want to put a '1' in front of their number
+ *
+ * 1(212)-999-2345 or
+ * 212 999 2344 or
+ * 212-999-0983
+ *
+ * but not
+ * 111-123-5434
+ * and not
+ * 212 123 4567
+ */
+$.validator.addMethod( "phoneUS", function( phone_number, element ) {
+	phone_number = phone_number.replace( /\s+/g, "" );
+	return this.optional( element ) || phone_number.length > 9 &&
+		phone_number.match( /^(\+?1-?)?(\([2-9]([02-9]\d|1[02-9])\)|[2-9]([02-9]\d|1[02-9]))-?[2-9]([02-9]\d|1[02-9])-?\d{4}$/ );
+}, "Please specify a valid phone number" );
+</script>
+<script>
+jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});
+// Wait for the DOM to be ready
+$(function() {
+  // Initialize form validation on the registration form.
+  // It has the name attribute "registration"
+  $("form[name='contact']").validate({
+    // Specify validation rules
+    rules: {
+      // The key name on the left side is the name attribute
+      // of an input field. Validation rules are defined
+      // on the right side
+      name: "required",
+      email: {
+        required: true,
+        // Specify that email should be validated
+        // by the built-in "email" rule
+        email: true
+      },
+      phone: {
+        required: true,
+        phoneUS: true
+      },
+      message: {
+        required: true,
+        minlength: 20,
+        maxlength: 500
+      }
+    },
+    // Specify validation error messages
+    messages: {
+      name: "Please enter your name",
+      email: "Please enter a valid email",
+      message: {
+        required: "Please provide a message",
+        minlength: "Your message must be a little bit longer",
+        maxlength: "Your message is too long. Max 500 characters",
+      },
+      email: "Please enter a valid email address"
+    },
+    // Make sure the form is submitted to the destination defined
+    // in the "action" attribute of the form when valid
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+});
+
+</script>

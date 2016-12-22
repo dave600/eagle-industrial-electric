@@ -6,14 +6,14 @@ root: ../
 ---
 <section class="about">
   <div class="secondary__billboard">
-    <div class="secondary__billboard--headline">
+    <div class="container secondary__billboard--headline">
       <h1>For questions about projects, please call (610) 521-7445</h1>
     </div>
   </div>
   <div class="container">
     <h4>Projects Bidding</h4>
     <div class="divider"></div>
-
+    <br>
     <div id="projects-content">
       <div id="loading-icon"><img src="{{page.root}}img/spin.gif"</div>
     </div>
@@ -29,7 +29,7 @@ root: ../
         <p><b>Plans</b></p>
           <ul>
             {{#if PlansPDF.length}}
-              <li><a href="http://www.google.com/{{PlansPDF}}">Plan 1</a></li>
+              <li><a href="{{PlansPDF}}">Plan 1</a></li>
             {{/if}}
             {{#if PlansPDF2.length}}
               <hr>
@@ -102,6 +102,6 @@ root: ../
       </div>
     </div>
     <hr>
-  </div>
+  </div><br><br>
   {% endraw %}
 </script>
